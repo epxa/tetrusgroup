@@ -1,28 +1,45 @@
 $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
 
 // bower:scss
-@import '../../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss';
-@import 'layout';
+@import "../../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss";
+@import "featherlight";
+@import "featherlight.gallery.min";
 // endbower
 
-//Variables 
+//Variables
 $imgDir: "../images/";
 
+//Variables 
 // 
+
+// global
+.container img{
+    max-width: 100%;
+}
+h1, .h1, h2, .h2, h3, .h3 {
+margin-top: 1.5em;
+margin-bottom: 1.5em;
+}
+body{
+    background: url(#{$imgDir}greyzz.png);
+}
+// global
+
 // header
-// 
-.btn{
+//
+.btn {
     padding: 12px 24px;
 }
-.header{
+
+.header {
     position: relative;
     background: #7ab348;
     padding-top: 5em;
-    padding-bottom: 240px;
-    margin-bottom: -240px;
+    padding-bottom: 400px;
+    margin-bottom: -400px;
 }
 
-.logo{
+.logo {
     position: absolute;
     left: 50%;
     top: 2.5em;
@@ -30,13 +47,14 @@ $imgDir: "../images/";
     margin-left: -5%;
 }
 
-.phone{
+.phone--wrapper {
     background: url(#{$imgDir}telephone.svg) no-repeat;
     padding-left: 5em;
     float: right;
     margin-bottom: 8em;
 }
-.phone--one,.phone--two{
+
+.phone--one, .phone--two {
     color: #FFF;
     font-size: 1.4em;
 }
@@ -44,14 +62,12 @@ $imgDir: "../images/";
 // end header
 
 // carousel
-.carousel--container{
-        margin-bottom: 4em;
-        box-shadow: 0px 50px 75px -35px rgba(0, 0, 0, 0.75), 0px 55px 152px -48px rgba(0, 0, 0, 0.55);
+.carousel--container {
+    margin-bottom: 4em;
+    box-shadow: 0px 50px 75px -35px rgba(0, 0, 0, 0.75), 0px 55px 152px -48px rgba(0, 0, 0, 0.55);
 }
 
-
-
-.carousel .form--inner{
+.carousel .form--inner {
     z-index: 100000;
     position: absolute;
     top: 40%;
@@ -59,42 +75,42 @@ $imgDir: "../images/";
     left: 75%;
     padding: 2em;
     -webkit-box-shadow: 0 0 3px #000;
-            box-shadow: 0 0 3px #000;
+    box-shadow: 0 0 3px #000;
     -webkit-border-radius: 3px;
-            border-radius: 3px;
-    background: rgb(155,190,100);
-    background-image: -webkit-linear-gradient(left, rgb(108,148,52) 0%, rgb(155,190,100) 100%);
-    background-image: -o-linear-gradient(left, rgb(108,148,52) 0%, rgb(155,190,100) 100%);
-    background-image: linear-gradient(to right, rgb(108,148,52) 0%, rgb(155,190,100) 100%);
-    input{
+    border-radius: 3px;
+    background: rgb(155, 190, 100);
+    background-image: -webkit-linear-gradient(left, rgb(108, 148, 52) 0%, rgb(155, 190, 100) 100%);
+    background-image: -o-linear-gradient(left, rgb(108, 148, 52) 0%, rgb(155, 190, 100) 100%);
+    background-image: linear-gradient(to right, rgb(108, 148, 52) 0%, rgb(155, 190, 100) 100%);
+    input {
         display: block;
     }
-    .form__name, .form__email, .form__phone{
+    .form__name, .form__email, .form__phone {
         padding: 5px;
         padding-left: 25px;
         margin-bottom: 1em;
         background: #fff url(#{$imgDir}contact.png) no-repeat 2px 50%;
     }
-    .form__email{
+    .form__email {
         background: #fff url(#{$imgDir}mail.png) no-repeat 2px 50%;
     }
-    .form__phone{
+    .form__phone {
         background: #fff url(#{$imgDir}phone.png) no-repeat 2px 50%;
         margin-bottom: 0;
     }
-    .form__submit{
+    .form__submit {
         position: absolute;
         bottom: -40%;
         left: 50%;
         color: #FFF;
         margin-left: -30%;
         background: #98BB61;
-        background-image: -moz-linear-gradient( 90deg, rgb(102,150,51) 0%, rgb(154,186,101) 100%);
-        background-image: -webkit-linear-gradient( 90deg, rgb(102,150,51) 0%, rgb(154,186,101) 100%);
-        background-image: -ms-linear-gradient( 90deg, rgb(102,150,51) 0%, rgb(154,186,101) 100%);
+        background-image: -moz-linear-gradient(90deg, rgb(102, 150, 51) 0%, rgb(154, 186, 101) 100%);
+        background-image: -webkit-linear-gradient(90deg, rgb(102, 150, 51) 0%, rgb(154, 186, 101) 100%);
+        background-image: -ms-linear-gradient(90deg, rgb(102, 150, 51) 0%, rgb(154, 186, 101) 100%);
         -webkit-box-shadow: 0 0 3px #333;
-                box-shadow: 0 0 3px #333;
-        &:hover{
+        box-shadow: 0 0 3px #333;
+        &:hover {
             background: #f15f36;
             color: #333;
             text-shadow: 1px 1px 1px #fff;
@@ -102,7 +118,7 @@ $imgDir: "../images/";
     }
 }
 
-.carousel-caption{
+.carousel-caption {
     width: 100%;
     height: 100%;
     right: 0;
@@ -110,37 +126,43 @@ $imgDir: "../images/";
     top: 0;
     bottom: 0;
 }
-.caption--head{
+
+.caption--head {
     position: absolute;
     top: 2%;
     left: 20%;
     right: 20%;
 }
-.caption--info--wrapper{
+
+.caption--info--wrapper {
     position: absolute;
     left: 10%;
     right: auto;
     top: 25%;
 }
-.caption--info{
+
+.caption--info {
     margin-bottom: 1.4em;
     padding-left: 30px;
     background: url(#{$imgDir}check-mark.svg) no-repeat 2px 50%;
 }
+
 // carousel
 
 // services
-.services-wrapper{
-    background: url(#{$imgDir}greyzz.png);
+.services-wrapper {
     -webkit-box-shadow: 0 0 3px #333;
-            box-shadow: 0 0 3px #333;
-        padding: 3em;
+    box-shadow: 0 0 3px #333;
+    padding: 0 3em 5em 3em;
 }
-.services-head{
+
+.services-head {
     text-align: center;
     line-height: 1.5em;
+    
 }
-.services__info{
+
+.services__info {
     text-align: center;
     line-height: 3em;
     padding-left: 2em;
@@ -150,68 +172,83 @@ $imgDir: "../images/";
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(102, 102, 102, 1);
 }
-.services__info[data="A"]{
+
+.services__info[data="A"] {
     background: url(#{$imgDir}house-building-service.svg) 0 50% no-repeat;
 }
-.services__info[data="B"]{
+
+.services__info[data="B"] {
     background: url(#{$imgDir}front-service.svg) 0 50% no-repeat;
 }
-.services__info[data="C"]{
+
+.services__info[data="C"] {
     background: url(#{$imgDir}office-service.svg) 0 50% no-repeat;
 }
-.services__info[data="D"]{
+
+.services__info[data="D"] {
     background: url(#{$imgDir}design-service.svg) 0 50% no-repeat;
 }
-.services__info[data="F"]{
+
+.services__info[data="F"] {
     background: url(#{$imgDir}project-service.svg) 0 50% no-repeat;
 }
+
 // services
 
 // reasons
-.reason-wrapper{
+.reason-wrapper {
     -webkit-box-shadow: 0 0 3px #000;
-            box-shadow: 0 0 3px #000;
-        margin-top: 5em;
-        margin-bottom: 5em;
+    box-shadow: 0 0 3px #000;
+    margin-top: 5em;
+    margin-bottom: 5em;
 }
 
-.reason-wrapper>.row{
-            margin-bottom: 2.5em;
+.reason-wrapper > .row {
+    margin-bottom: 2.5em;
 }
-.reason__head{
-    text-align: center;
+
+.reason__head {
+    @extend .services-head;
 }
-.reason__sign{
+
+.reason__sign {
     max-width: 33.33%;
     float: left;
 }
-.sign__img{
+
+.sign__img {
     width: 130px;
+    height: 130px;
     margin: 0 auto;
+    padding: 30px;
+    border-radius: 50%;
+    border: 3px solid #637a36;
+    box-shadow: inset 0 0 20px rgba(46, 133, 38, 0.26);
 }
-.sign__info{
+
+.sign__info {
     text-align: center;
 }
+
 // reasons
 
 // form--cta
 
-.form--cta{
+.form--cta {
     min-height: 480px;
     position: relative;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
 }
 
-
-.form__info{
+.form__info {
     position: absolute;
     width: 100%;
     height: 5em;
-    background: rgba(0,0,0,0.5);
-    background-image: -moz-linear-gradient( 90deg, rgba(0,0,0,.75) 0%, rgba(78,78,78,0.5) 100%);
-    background-image: -webkit-linear-gradient( 90deg, rgba(0,0,0,.75) 0%, rgba(78,78,78,0.5) 100%);
-    background-image: -ms-linear-gradient( 90deg, rgba(0,0,0,.75) 0%, rgba(78,78,78,0.5) 100%);
+    background: rgba(0, 0, 0, 0.5);
+    background-image: -moz-linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(78, 78, 78, 0.5) 100%);
+    background-image: -webkit-linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(78, 78, 78, 0.5) 100%);
+    background-image: -ms-linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(78, 78, 78, 0.5) 100%);
     top: 25%;
     bottom: 20%;
     text-align: center;
@@ -219,7 +256,7 @@ $imgDir: "../images/";
     color: #f56e2c;
     line-height: 5em;
     text-shadow: 1px 1px 5px #000;
-    &:after{
+    &:after {
         position: absolute;
         top: 65%;
         left: 50%;
@@ -229,18 +266,19 @@ $imgDir: "../images/";
         margin-left: -5em;
         background: rgba(255, 255, 255, 0.5);
         -webkit-box-shadow: 0 0 3px #FFF;
-                box-shadow: 0 0 3px #FFF;
+        box-shadow: 0 0 3px #FFF;
         -webkit-border-radius: 50%;
-                border-radius: 50%;
+        border-radius: 50%;
     }
 }
-.fogg{
-    background: url(http://loremflickr.com/1200/480);
+
+.fogg {
+    background: url(http://loremflickr.com/1200/480/city/);
     width: 100%;
     height: 100%;
     position: absolute;
-    
 }
+
 .form--wide {
     z-index: 100000;
     position: absolute;
@@ -249,47 +287,160 @@ $imgDir: "../images/";
     left: 75%;
     padding: 2em;
     -webkit-box-shadow: 0 0 3px #000;
-            box-shadow: 0 0 3px #000;
+    box-shadow: 0 0 3px #000;
     -webkit-border-radius: 3px;
-            border-radius: 3px;
-    background: rgb(155,190,100);
-    background-image: -webkit-linear-gradient(left, rgb(108,148,52) 0%, rgb(155,190,100) 100%);
-    background-image: -o-linear-gradient(left, rgb(108,148,52) 0%, rgb(155,190,100) 100%);
-    background-image: linear-gradient(to right, rgb(108,148,52) 0%, rgb(155,190,100) 100%);
-    
-    input{
+    border-radius: 3px;
+    background: rgb(155, 190, 100);
+    background-image: -webkit-linear-gradient(left, rgb(108, 148, 52) 0%, rgb(155, 190, 100) 100%);
+    background-image: -o-linear-gradient(left, rgb(108, 148, 52) 0%, rgb(155, 190, 100) 100%);
+    background-image: linear-gradient(to right, rgb(108, 148, 52) 0%, rgb(155, 190, 100) 100%);
+    input {
         display: block;
     }
-    .form__name, .form__email, .form__phone{
+    .form__name, .form__email, .form__phone {
         padding: 5px;
         padding-left: 25px;
         margin-bottom: 1em;
         background: #fff url(#{$imgDir}contact.png) no-repeat 2px 50%;
     }
-    .form__email{
+    .form__email {
         background: #fff url(#{$imgDir}mail.png) no-repeat 2px 50%;
     }
-    .form__phone{
+    .form__phone {
         background: #fff url(#{$imgDir}phone.png) no-repeat 2px 50%;
         margin-bottom: 0;
     }
-    .form__submit{
+    .form__submit {
         position: absolute;
         bottom: -40%;
         left: 50%;
         color: #FFF;
         margin-left: -30%;
         background: #98BB61;
-        background-image: -moz-linear-gradient( 90deg, rgb(102,150,51) 0%, rgb(154,186,101) 100%);
-        background-image: -webkit-linear-gradient( 90deg, rgb(102,150,51) 0%, rgb(154,186,101) 100%);
-        background-image: -ms-linear-gradient( 90deg, rgb(102,150,51) 0%, rgb(154,186,101) 100%);
+        background-image: -moz-linear-gradient(90deg, rgb(102, 150, 51) 0%, rgb(154, 186, 101) 100%);
+        background-image: -webkit-linear-gradient(90deg, rgb(102, 150, 51) 0%, rgb(154, 186, 101) 100%);
+        background-image: -ms-linear-gradient(90deg, rgb(102, 150, 51) 0%, rgb(154, 186, 101) 100%);
         -webkit-box-shadow: 0 0 3px #333;
-                box-shadow: 0 0 3px #333;
-        &:hover{
+        box-shadow: 0 0 3px #333;
+        &:hover {
             background: #f15f36;
             color: #333;
             text-shadow: 1px 1px 1px #fff;
         }
     }
 }
+
 // form--cta
+// works
+
+.works--wrapper{
+    margin-top: 5em;
+    margin-bottom: 5em;
+    -webkit-box-shadow: 0 0 3px #333;
+            box-shadow: 0 0 3px #333;
+}
+.works--head{
+    @extend .services-head;
+}
+
+// works
+
+// how we work
+.how--wrapper{
+    @extend.reason-wrapper;
+}
+
+
+.how--head{
+    @extend .services-head;
+}
+.how__step{
+    float: left;
+    width: 20%;
+    img{
+        max-width: 100%;
+    }
+}
+.step__sign {
+    width: 170px;
+    margin: 0 auto;
+}
+.step__info {
+    font-size: 1.5em;
+    text-align: center;
+    margin-top: 2em;
+}
+.how__step img {
+    height: 170px;
+}
+// how we work
+
+//customers 
+.customer--wrapper{
+    @extend.reason-wrapper;
+}
+
+.customer--head{
+    @extend .services-head;
+}
+.customer--wrapper img{
+    width: 30%;
+    float: left;
+}
+.customer--wrapper .caption{
+    float: left;
+    font-size: 1.3em;
+    padding: 1em;
+    text-align: center;
+    width: 70%;
+}
+
+//customers 
+
+// partners
+.partners--wrapper{
+    @extend.reason-wrapper;
+    img{
+        width: 100%;
+        height: 120px;
+    }
+    .media-heading{
+        text-align: center;
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+}
+.partners--head{
+    @extend .services-head;
+}
+
+
+// partners
+
+//footer
+
+.footer--wrapper{
+    z-index: -1;
+        position: relative;
+    background: #7ab348;
+    padding-bottom: 5em;
+    padding-top: 240px;
+    margin-top: -240px;
+    .logo{
+        top: auto;
+        bottom: 10%;
+    }
+    .phone--wrapper{
+        margin-top: 5em;
+        margin-bottom: 0;
+        
+    }
+    .date{
+        float: left;
+margin-top: 5em;
+font-size: 1.3em;
+color: #fff;
+    }
+}
+
+//footer
