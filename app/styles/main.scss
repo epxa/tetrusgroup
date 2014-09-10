@@ -94,7 +94,7 @@ body{
     box-shadow: 0 40px 60px -30px #333333;
 }
 
-.carousel .form--inner {
+.form--inner {
     z-index: 100;
     position: absolute;
     left: 70%;
@@ -114,7 +114,9 @@ body{
     background : linear-gradient(90deg, rgba(207, 241, 154, 1) 0%, rgba(126, 184, 48, 1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#CFF19A',endColorstr='#7EB830' , GradientType=1);
 
-    input {
+    
+}
+input {
         display: block;
     }
     .form__name, .form__email, .form__phone {
@@ -151,9 +153,10 @@ body{
         box-shadow: 0 0 3px #333;
         &:hover {
             background: #ff8e54;
+            text-shadow: 0px 1px 1px #FFF;
         }
     }
-}
+
 .carousel-control{
     background: none !important;
     &:hover{
@@ -174,6 +177,7 @@ body{
     top: 0;
     bottom: 0;
     z-index: 0;
+    text-shadow: 0 1px 1px #333;
 }
 
 .caption--head {
@@ -191,6 +195,7 @@ body{
 }
 
 .caption--info {
+    max-width: 75%;
     margin-bottom: 1.4em;
     padding-left: 2.5em;
     font-size: 1.3em;
@@ -201,7 +206,8 @@ body{
 
 // services
 .services-wrapper {
-    padding: 0 3em 5em 3em;
+    padding: 0 0 3em 0;
+    background: url(#{$imgDir}cream_dust.png);
 }
 
 .services-head {
@@ -320,64 +326,12 @@ body{
     position: absolute;
 }
 
-.form--wide {
-    z-index: 100000;
-    position: absolute;
+.form--wide .form--inner{
+
+    @extend .form--inner;
     top: 42.5%;
-    margin-top: -4.5%;
+    margin-top: -5.5%;
     left: 75%;
-    padding: 2em;
-    -webkit-box-shadow: 0 0 3px #000;
-    box-shadow: 0 0 3px #000;
-    -webkit-border-radius: 3px;
-    border-radius: 3px;
-    background : -moz-linear-gradient(0% 50% 0deg,rgba(207, 241, 154, 1) 0%,rgba(126, 184, 48, 1) 100%);
-    background : -webkit-linear-gradient(0deg, rgba(207, 241, 154, 1) 0%, rgba(126, 184, 48, 1) 100%);
-    background : -webkit-gradient(linear,0% 50% ,100% 50% ,color-stop(0,rgba(207, 241, 154, 1) ),color-stop(1,rgba(126, 184, 48, 1) ));
-    background : -o-linear-gradient(0deg, rgba(207, 241, 154, 1) 0%, rgba(126, 184, 48, 1) 100%);
-    background : -ms-linear-gradient(0deg, rgba(207, 241, 154, 1) 0%, rgba(126, 184, 48, 1) 100%);
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#CFF19A', endColorstr='#7EB830' ,GradientType=0)";
-    background : linear-gradient(90deg, rgba(207, 241, 154, 1) 0%, rgba(126, 184, 48, 1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#CFF19A',endColorstr='#7EB830' , GradientType=1);
-    input {
-        display: block;
-    }
-    .form__name, .form__email, .form__phone {
-        padding: 5px;
-        padding-left: 25px;
-        margin-bottom: 1em;
-        background: #fff url(#{$imgDir}contact.png) no-repeat 2px 50%;
-    }
-    .form__email {
-        background: #fff url(#{$imgDir}mail.png) no-repeat 2px 50%;
-    }
-    .form__phone {
-        background: #fff url(#{$imgDir}phone.png) no-repeat 2px 50%;
-        margin-bottom: 0;
-    }
-    .form__submit {
-        position: absolute;
-        bottom: -50%;
-        left: 50%;
-        color: #FFF;
-        margin-left: -40%;
-        background: transparent;
-        text-shadow: 0px 1px 1px #000;
-        border: 3px solid #ff8e54;
-        -webkit-transition: all 0.5s ease-in-out;
-           -moz-transition: all 0.5s ease-in-out;
-            -ms-transition: all 0.5s ease-in-out;
-             -o-transition: all 0.5s ease-in-out;
-                transition: all 0.5s ease-in-out;
-        background-image: -moz-linear-gradient(90deg, rgb(102, 150, 51) 0%, rgb(154, 186, 101) 100%);
-        background-image: -webkit-linear-gradient(90deg, rgb(102, 150, 51) 0%, rgb(154, 186, 101) 100%);
-        background-image: -ms-linear-gradient(90deg, rgb(102, 150, 51) 0%, rgb(154, 186, 101) 100%);
-        -webkit-box-shadow: 0 0 3px #333;
-        box-shadow: 0 0 3px #333;
-        &:hover {
-            background: #ff8e54;
-        }
-    }
 }
 
 // form--cta
@@ -417,6 +371,7 @@ body{
 .how--head{
     @extend .services-head;
     color: #FFF;
+    text-shadow: 0 1px 1px #000;
 }
 .how__step{
     float: left;
@@ -435,7 +390,7 @@ body{
 .step__info {
     font-size: 1.5em;
     text-align: center;
-    margin-top: 2em;
+    margin-top: 1.5em;
     text-shadow: 0px 1px 1px #fff;
 }
 .how__step img {
@@ -446,7 +401,7 @@ body{
 //customers 
 .customer--wrapper{
     @extend.reason-wrapper;
-    background: #eee;
+    background: url(#{$imgDir}geometry.png);
     
 }
 
@@ -471,7 +426,13 @@ body{
 
 // partners
 .partners--wrapper{
-    background: #FFF;
+    background: url(#{$imgDir}cream_dust.png);
+
+    .media{
+        @extend .services__info;
+        margin-top: 15px;
+        
+    }
     @extend.reason-wrapper;
     img{
         width: 100%;
@@ -497,13 +458,11 @@ body{
 .footer--wrapper{
     z-index: -1;
         position: relative;
-    background: #7ab348;
+    background: #7eb830;
     padding-bottom: 5em;
-    padding-top: 240px;
-    margin-top: -240px;
     .logo{
         top: auto;
-        bottom: 10%;
+        bottom: 5%;
     }
     .phone--wrapper{
         margin-top: 5em;
@@ -512,10 +471,310 @@ body{
     }
     .date{
         float: left;
-margin-top: 5em;
-font-size: 1.3em;
-color: #fff;
+        margin-top: 5em;
+        font-size: 1.3em;
+        color: #fff;
     }
 }
 
 //footer
+
+
+
+// responsive
+@media screen and (max-width: 1200px) {
+    .carousel--container .form--inner{
+        left: 65%;
+    }
+}
+@media screen and (max-width: 1100px) {
+    .form--wide .form--inner{
+        margin-top: -7%;
+        left: 70%;
+    }
+    .form__info{
+        text-align: left;
+        padding-left: 1em;
+        
+    }
+
+    .form__info:after{
+        left: 0;
+        margin-left: 1em;
+    }
+    .step__info{
+        font-size: 1.2em;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .header {
+    padding-bottom: 180px;
+    margin-bottom: -230px;
+    }
+    .caption--head{
+        margin-top: 0;
+    }
+    .carousel--container .form--inner{
+        left: 55%;
+    }
+    .form--wide .form--inner{
+        margin-top: -8%;
+        left: 65%;
+    }
+    .services__info p, .partners--wrapper .media p{
+        padding-top: 4em;
+    }
+    .sign__info{
+        font-size: 1.3em;
+    }
+    .step__sign{
+        width: 130px;
+        height: 130px;
+    }
+
+    .footer--wrapper .logo {
+        bottom: 15%;
+    }
+    .phone--one, .phone--two{
+        font-size: 1.2em;
+    }
+}
+@media screen and (max-width: 768px) {
+    .form--wide .form--inner{
+        margin-top: -9%;
+        left: 60%;
+    }
+    .footer--wrapper .logo{
+        bottom: 35%;
+    }
+    .step__info{
+        font-size: 1em;
+    }
+    .form__info{
+        height: 8em;
+        line-height: 8em;
+        font-size: 2em;
+        
+    }
+    .form__info:after{
+        top: 60%;
+    }
+    .customer--wrapper img{
+        width: 100%;
+        float: none;
+    }
+    .caption--info{
+        max-width: 70%;
+    }
+    .customer--wrapper .caption{
+        width: 100%;
+        float: none;
+    }
+    .services__info p, .partners--wrapper .media p, .partners--wrapper .media p{
+        padding-top: 3em;
+    }
+}
+@media screen and (max-width: 670px) {
+    .caption--info{
+        font-size: 1em;
+        max-width: 60%;
+    }
+    h2, .h2 {
+        font-size: 1.5em;
+    }
+    .form--wide .form--inner{
+        left: 55%;
+    }
+    .step__sign{
+        width: 100px;
+        height: 100px;
+        
+    }
+    .phone--one, .phone--two{
+        font-size: 1em;
+    }
+    .form--inner, .form--wide .form--inner{
+        padding: 1.5em;
+    }
+    .btn{
+        padding: 6px 12px;
+    }
+    .form__submit{
+        margin-left: -37.5%;
+        bottom: -35%;
+    }
+    .footer--wrapper .date{
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .logo{
+        top: 3.5em;
+    }
+    .caption--info--wrapper{
+        left: 5%;
+    }
+    .form__info{
+        height: 11em;
+        line-height: 11em;
+        font-size: 1.5em;
+    }
+    .step__sign{
+        width: 80px;
+        height: 80px;
+        
+    }
+    .caption--info {
+        padding-left: 1.5em;
+    }
+    .form--inner, .form--wide .form--inner{
+        padding: 0.5em;
+    }
+    .btn {
+        padding: 3px 6px;
+    }
+    .form__name, .form__email, .form__phone{
+        padding: 0 0 0 30px;
+        
+    }
+    .form__submit{
+        bottom: -50%;
+    }
+    .form__info{
+        line-height: 9em;
+    }
+    .form__info:after {
+        top: 50%;
+    }
+    .carousel--container .form--inner{
+        left: 50%;
+    }
+    .phone--wrapper{
+        padding-left: 3em;
+    }
+}
+@media screen and (max-width: 500px) {
+    .carousel--container .form--inner{
+        
+    }
+    .form--inner input{
+        max-width: 150px;
+    }
+    .form__submit{
+        margin-left: -41%;
+    }
+    .form--wide .form--inner{
+        left: 60%;
+    }
+    .btn {
+        font-size: 1em;
+    }
+    .step__info{
+        font-size: 0.7em;
+    }
+}
+@media screen and (max-width: 450px) {
+    .carousel--container .form--inner{
+        left: 55%;
+    }
+    .form--wide .form--inner{
+        left: 58%;
+    }
+    .step__sign{
+        width: 60px;
+        height: 60px;
+    }
+    .form--inner input, .form--wide .form--inner input{
+        max-width: 130px;
+    }
+    .caption--info{
+        max-width: 50%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    .caption--head{
+        font-size: 1em;
+        
+    }
+    .caption--info{
+        font-size: 0.7em;
+    }
+    .carousel--container .form--inner {
+        top: 30%;
+    }
+    .phone--wrapper{
+        margin-bottom: 5em;
+    }
+    .form--wide .form--inner{
+        top: 36.5%;
+    }
+    .form__info{
+        font-size: 1em;
+        height: 13em;
+        line-height: 11;
+    }
+    .form--wide .form--inner{
+        left: 52%;
+    }
+    .form__submit{
+        margin-left: -45%;
+        bottom: -35%;
+    }
+    .phone--one, .phone--two{
+        font-size: 0.7em;
+    }
+    .footer--wrapper .phone--wrapper{
+        margin-top: 3em;
+    }
+    .footer--wrapper .date{
+        margin-top: 3em;
+    }
+    .footer--wrapper{
+        padding-bottom: 2em;
+    }
+
+}
+
+@media screen and (max-width: 320px) {
+    .form--inner input, .form--wide .form--inner input, .form--wide .form--inner input{
+        max-width: 110px;
+    }
+    .header{
+        padding-top: 3em;
+    }
+    .carousel--container .form--inner{
+        left: 53%;
+    }
+    .logo{
+        top: 2.5em;
+    }
+    .step__sign {
+    width: 45px;
+    height: 45px;
+    }
+    .step__info {
+    font-size: 0.5em;
+    }
+    .form--inner input, .form--wide .form--inner input, .form--wide .form--inner input{
+        font-size: 0.7em;
+    }
+    .btn{
+        font-size: 0.7em;
+    }
+    .form__submit{
+        bottom: -35%;
+        margin-left: -40%;
+    }
+
+    .phone--one, .phone--two{
+        font-size: 0.6em;
+    }
+    .reason-wrapper, .works--wrapper, .how--wrapper, .customer--wrapper, .partners--wrapper{
+        padding: 2em 0 2em 0;
+    }
+}
+// responsive
