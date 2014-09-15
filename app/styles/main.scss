@@ -10,7 +10,7 @@ $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/
 //Variables
 $imgDir: "../images/";
 
-$icons: house-building-service,front-service,office-service,design-service,project-service;
+// $icons: house-building-service,front-service,office-service,design-service,project-service;
  
 
  // functions
@@ -195,7 +195,7 @@ input {
 }
 
 .caption--info {
-    max-width: 75%;
+    max-width: 100%;
     margin-bottom: 1.4em;
     padding-left: 2.5em;
     font-size: 1.3em;
@@ -330,7 +330,7 @@ input {
 
     @extend .form--inner;
     top: 42.5%;
-    margin-top: -5.5%;
+    margin-top: -4.5%;
     left: 75%;
 }
 
