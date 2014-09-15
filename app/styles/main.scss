@@ -137,7 +137,7 @@ input {
         bottom: -50%;
         left: 50%;
         color: #FFF;
-        margin-left: -40%;
+        margin-left: -42%;
         background: transparent;
         text-shadow: 0px 1px 1px #000;
         border: 3px solid #ff8e54;
@@ -202,7 +202,12 @@ input {
     background: url(#{$imgDir}check-mark.svg) no-repeat 2px 50%;
     text-align: left;
 }
-
+span.glyphicon.glyphicon-chevron-left{
+    background: url(../images/left.svg) 0 0 no-repeat;
+}
+span.glyphicon.glyphicon-chevron-right{
+    background: url(../images/right.svg) 100% 0 no-repeat;
+}
 // carousel
 
 // services
@@ -321,7 +326,7 @@ input {
 }
 
 .fogg {
-    background: url(../images/autumn_railway-wallpaper-1920x1080.JPG);
+    background: url(http://loremflickr.com/1200/500/newyork) no-repeat;
     width: 100%;
     height: 100%;
     position: absolute;
@@ -330,7 +335,7 @@ input {
 .form--wide .form--inner{
 
     @extend .form--inner;
-    top: 42.5%;
+    top: 41%;
     margin-top: -4.5%;
     left: 75%;
 }
