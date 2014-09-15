@@ -58,8 +58,8 @@ body{
     position: relative;
     background: #cff19a;
     padding-top: 5em;
-    padding-bottom: 400px;
-    margin-bottom: -400px;
+    padding-bottom: 300px;
+    margin-bottom: -300px;
 }
 
 .logo {
@@ -200,6 +200,7 @@ input {
     padding-left: 2.5em;
     font-size: 1.3em;
     background: url(#{$imgDir}check-mark.svg) no-repeat 2px 50%;
+    text-align: left;
 }
 
 // carousel
@@ -486,10 +487,13 @@ input {
     .carousel--container .form--inner{
         left: 65%;
     }
+    .form--wide .form--inner{
+        top: 38.5%;
+    }
 }
 @media screen and (max-width: 1100px) {
     .form--wide .form--inner{
-        margin-top: -7%;
+        margin-top: -5%;
         left: 70%;
     }
     .form__info{
@@ -509,18 +513,31 @@ input {
 
 @media screen and (max-width: 992px) {
     .header {
-    padding-bottom: 180px;
-    margin-bottom: -230px;
+    padding-bottom: 130px;
+    margin-bottom: -180px;
+    }
+    .btn {
+        padding: 6px 12px;
+    }
+    .form__submit{
+        margin-left: -50%;
+        bottom: -40%;
     }
     .caption--head{
         margin-top: 0;
     }
     .carousel--container .form--inner{
-        left: 55%;
+        left: 70%;
     }
     .form--wide .form--inner{
-        margin-top: -8%;
+        margin-top: -5%;
         left: 65%;
+    }
+    .form--inner, .form--wide .form--inner{
+        padding: 1em;
+    }
+    .form--inner input{
+        max-width: 150px;
     }
     .services__info p, .partners--wrapper .media p{
         padding-top: 4em;
@@ -542,7 +559,6 @@ input {
 }
 @media screen and (max-width: 768px) {
     .form--wide .form--inner{
-        margin-top: -9%;
         left: 60%;
     }
     .footer--wrapper .logo{
@@ -564,9 +580,7 @@ input {
         width: 100%;
         float: none;
     }
-    .caption--info{
-        max-width: 70%;
-    }
+
     .customer--wrapper .caption{
         width: 100%;
         float: none;
@@ -574,11 +588,13 @@ input {
     .services__info p, .partners--wrapper .media p, .partners--wrapper .media p{
         padding-top: 3em;
     }
+    .corousel__form--outer{
+        display: none;
+    }
 }
 @media screen and (max-width: 670px) {
     .caption--info{
         font-size: 1em;
-        max-width: 60%;
     }
     h2, .h2 {
         font-size: 1.5em;
@@ -601,7 +617,7 @@ input {
         padding: 6px 12px;
     }
     .form__submit{
-        margin-left: -37.5%;
+        margin-left: -47%;
         bottom: -35%;
     }
     .footer--wrapper .date{
@@ -641,6 +657,7 @@ input {
     }
     .form__submit{
         bottom: -50%;
+        margin-left: -50%;
     }
     .form__info{
         line-height: 9em;
@@ -659,11 +676,8 @@ input {
     .carousel--container .form--inner{
         
     }
-    .form--inner input{
-        max-width: 150px;
-    }
     .form__submit{
-        margin-left: -41%;
+        margin-left: -45%;
     }
     .form--wide .form--inner{
         left: 60%;
@@ -689,9 +703,7 @@ input {
     .form--inner input, .form--wide .form--inner input{
         max-width: 130px;
     }
-    .caption--info{
-        max-width: 50%;
-    }
+
 }
 
 @media screen and (max-width: 400px) {
@@ -741,13 +753,13 @@ input {
 
 @media screen and (max-width: 320px) {
     .form--inner input, .form--wide .form--inner input, .form--wide .form--inner input{
-        max-width: 110px;
+        max-width: 95px;
     }
     .header{
         padding-top: 3em;
     }
     .carousel--container .form--inner{
-        left: 53%;
+        left: 60%;
     }
     .logo{
         top: 2.5em;
@@ -759,6 +771,9 @@ input {
     .step__info {
     font-size: 0.5em;
     }
+    .form--wide .form--inner{
+        left: 60%;
+    }
     .form--inner input, .form--wide .form--inner input, .form--wide .form--inner input{
         font-size: 0.7em;
     }
@@ -767,7 +782,7 @@ input {
     }
     .form__submit{
         bottom: -35%;
-        margin-left: -40%;
+        margin-left: -45%;
     }
 
     .phone--one, .phone--two{
@@ -776,5 +791,6 @@ input {
     .reason-wrapper, .works--wrapper, .how--wrapper, .customer--wrapper, .partners--wrapper{
         padding: 2em 0 2em 0;
     }
+
 }
 // responsive
