@@ -1,8 +1,12 @@
 node_modules
-dist
 .tmp
 .sass-cache
 bower_components
 test/bower_components
 app/scripts/modulargrid_debug.js
 Assets
+icons.ai
+design-service.svg
+Gruntfile.js
+.yo-rc.json
+package.json
